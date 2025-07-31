@@ -1,6 +1,6 @@
 name: Js CICD
 
-on: [pull_request]
+on: [pull_request, push]
 
 jobs:
 
