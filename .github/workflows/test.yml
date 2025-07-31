@@ -1,0 +1,23 @@
+name: Js CICD
+
+on: [pull_request]
+
+jobs:
+
+  test:
+    runs-on: ubumtu-latest
+
+    steps:
+      - name: Checkout
+        uses: action/checkout@v4
+
+        -name: setup node js
+        uses: actions/setup-node@v4
+        with: 
+          node-version: '22.14'
+
+        -name: install dependencies
+        run: npm install
+
+        -name: run test
+        run: npm test
