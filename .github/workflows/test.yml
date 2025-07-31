@@ -5,10 +5,10 @@ on: [pull_request, push]
 jobs:
 
   test:
-    runs-on: ubumtu-latest
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: action/checkout@v4
 
         -name: setup node js
